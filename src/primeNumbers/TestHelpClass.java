@@ -32,6 +32,12 @@ public class TestHelpClass {
     int primeAmount = InefficientPrimeSieve.amountOfPrimes(userInput);
     Instant end = Instant.now();
     Duration diff = Duration.between(start, end);
-    System.out.printf("amount of primes = %d, time taken in millisecond for n = %d: %d%n", primeAmount, userInput, diff.toMillis());
+    System.out.printf("Inefficient sieve, amount of primes = %d, time taken in millisecond for n = %d: %d%n", primeAmount, userInput, diff.toMillis());
+
+    start = Instant.now();
+    primeAmount = ListPrimeSieve.amountOfPrimes(userInput);
+    end = Instant.now();
+    diff = Duration.between(start, end);
+    System.out.printf("list sieve, amount of primes = %d, time taken in millisecond for n = %d: %d%n", primeAmount, userInput, diff.toMillis());
   }
 }
