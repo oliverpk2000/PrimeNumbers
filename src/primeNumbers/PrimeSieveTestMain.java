@@ -5,7 +5,7 @@ package primeNumbers;
  *
  * @author Oliver Pecek (oliver)
  */
-public class InefficientPrimeSieveTestMain {
+public class PrimeSieveTestMain {
   public static void main(String[] args) {
     int n = TestHelpClass.userInputTaker();
     TestHelpClass.functionTimer(n);

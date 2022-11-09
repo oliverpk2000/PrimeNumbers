@@ -12,11 +12,18 @@ public class ListPrimeSieve {
     ArrayList<Integer> knownPrimes = new ArrayList<>();
     knownPrimes.add(1);
     knownPrimes.add(2);
+
     for (int i = 3; i <= last; i++) {
-      knownPrimes.add(i + 1);
+      int modCount = 0;
+      for (int j = 0; j < i; j++) {
+        if(i % knownPrimes.get(j) == 0){
+          modCount++;
+        }
+      }
+      if(modCount == 2){
+        knownPrimes.add(i);
+      }
     }
-    System.out.println("log");
-    System.out.println("kek");
-    return 0;
+    return knownPrimes.size();
   }
 }
