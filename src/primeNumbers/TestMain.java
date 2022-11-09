@@ -8,11 +8,11 @@ import java.time.Instant;
  *
  * @author Oliver Pecek (oliver)
  */
-public class testMain {
+public class TestMain {
   public static void main(String[] args) {
     int n = 100000;
     Instant start = Instant.now();
-    int primeAmount = inefficientPrimeSieve.amountOfPrimes(n);
+    int primeAmount = InefficientPrimeSieve.amountOfPrimes(n);
     Instant end = Instant.now();
     Duration diff = Duration.between(start, end);
     System.out.printf("amount of primes = %d, time taken in millisec for n = %d: %d%n", primeAmount, n, diff.toMillis());

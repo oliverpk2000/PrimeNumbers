@@ -5,7 +5,7 @@ package primeNumbers;
  *
  * @author Oliver Pecek (oliver)
  */
-public class inefficientPrimeSieve {
+public class InefficientPrimeSieve {
   public static int amountOfPrimes(int last) {
     int countPrimes = 0;
 
