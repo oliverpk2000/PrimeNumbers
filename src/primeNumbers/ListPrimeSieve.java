@@ -13,7 +13,7 @@ public class ListPrimeSieve {
     knownPrimes.add(1);
     knownPrimes.add(2);
     for (int i = 3; i <= last; i++) {
-      knownPrimes.add(i);
+      knownPrimes.add(i + 1);
     }
     System.out.println("log");
     System.out.println("kek");
