@@ -15,7 +15,7 @@ public class TestHelpClass {
         Scanner inputScanner = new Scanner(System.in);
         int userInput;
         while (true) {
-            System.out.print("n:");
+            System.out.print("n: ");
             String input = inputScanner.nextLine();
             try {
                 userInput = Integer.parseInt(input);
