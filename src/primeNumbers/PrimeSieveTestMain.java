@@ -9,5 +9,6 @@ public class PrimeSieveTestMain {
   public static void main(String[] args) {
     int n = TestHelpClass.userInputTaker();
     TestHelpClass.functionTimer(n);
+    System.out.println("list is much faster");
   }
 }
