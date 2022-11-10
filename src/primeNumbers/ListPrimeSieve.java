@@ -1,6 +1,7 @@
 package primeNumbers;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created: 09/11/2022
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  */
 public class ListPrimeSieve {
   public static int amountOfPrimes(int last) {
-    ArrayList<Integer> knownPrimes = new ArrayList<>();
+    List<Integer> knownPrimes = new ArrayList<>();
     knownPrimes.add(2);
 
     for (int i = 3; i <= last; i++) {
