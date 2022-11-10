@@ -10,17 +10,17 @@ import java.util.ArrayList;
 public class ListPrimeSieve {
   public static int amountOfPrimes(int last) {
     ArrayList<Integer> knownPrimes = new ArrayList<>();
-    knownPrimes.add(1);
     knownPrimes.add(2);
 
     for (int i = 3; i <= last; i++) {
-      int modCount = 0;
+      boolean primeNum = true;
       for (Integer knownPrime : knownPrimes) {
-        if(i % knownPrime == 0){
-          modCount++;
+        if (i % knownPrime == 0) {
+          primeNum = false;
+          break;
         }
       }
-      if (modCount == 2) {
+      if (primeNum) {
         knownPrimes.add(i);
       }
     }

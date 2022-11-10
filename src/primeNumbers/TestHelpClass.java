@@ -29,15 +29,15 @@ public class TestHelpClass {
 
   public static void functionTimer(int userInput){
     Instant start = Instant.now();
-    int primeAmount = InefficientPrimeSieve.amountOfPrimes(userInput);
+    int primeAmount = ListPrimeSieve.amountOfPrimes(userInput);
     Instant end = Instant.now();
     Duration diff = Duration.between(start, end);
-    System.out.printf("Inefficient sieve, amount of primes = %d, time taken in millisecond for n = %d: %d%n", primeAmount, userInput, diff.toMillis());
+    System.out.printf("list sieve, amount of primes = %d, time taken in seconds for n = %d: %d (%d milliseconds)%n", primeAmount, userInput, diff.toSeconds(), diff.toMillis());
 
-    start = Instant.now();
-    primeAmount = ListPrimeSieve.amountOfPrimes(userInput);
-    end = Instant.now();
-    diff = Duration.between(start, end);
-    System.out.printf("list sieve, amount of primes = %d, time taken in millisecond for n = %d: %d%n", primeAmount, userInput, diff.toMillis());
+    Instant start2 = Instant.now();
+    int primeAmount2 = InefficientPrimeSieve.amountOfPrimes(userInput);
+    Instant end2 = Instant.now();
+    Duration diff2 = Duration.between(start2, end2);
+    System.out.printf("inefficient sieve, amount of primes = %d, time taken in seconds for n = %d: %d (%d milliseconds)%n", primeAmount2, userInput, diff2.toSeconds(), diff2.toMillis());
   }
 }
